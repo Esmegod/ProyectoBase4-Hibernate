@@ -21,19 +21,18 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 
-/**
- *
- * @author darkdestiny
- */
+
 @Entity
-@Table (name="Categoria")
+@Table
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Categoria implements Serializable{
-    private int idCategoria;
+   
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name="idCategoria")
+    private int idCategoria;
     
     @Column(name="nombreCategoria", length=50, nullable=false)
     private String nombreCategoria;

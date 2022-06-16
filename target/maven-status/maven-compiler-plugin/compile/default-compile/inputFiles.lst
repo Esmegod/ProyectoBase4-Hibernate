@@ -1,6 +1,7 @@
-C:\Users\escom\Desktop\Practicas-WAD\ProyectoBase_4\src\main\java\com\ipn\mx\modelo\entidades\Articulo.java
-C:\Users\escom\Desktop\Practicas-WAD\ProyectoBase_4\src\main\java\com\ipn\mx\controlador\CategoriaServlet.java
-C:\Users\escom\Desktop\Practicas-WAD\ProyectoBase_4\src\main\java\com\ipn\mx\utilerias\Utileria.java
-C:\Users\escom\Desktop\Practicas-WAD\ProyectoBase_4\src\main\java\com\ipn\mx\modelo\dao\CategoriaDAO.java
-C:\Users\escom\Desktop\Practicas-WAD\ProyectoBase_4\src\main\java\com\ipn\mx\modelo\dto\CategoriaDTO.java
-C:\Users\escom\Desktop\Practicas-WAD\ProyectoBase_4\src\main\java\com\ipn\mx\modelo\entidades\Categoria.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\controlador\CategoriaServlet.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\dto\CategoriaDTO.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\Utilerias\HibernateUtil.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\entidades\Articulo.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\entidades\Categoria.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\dao\CategoriaDAO.java
+C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\utilerias\Utileria.java

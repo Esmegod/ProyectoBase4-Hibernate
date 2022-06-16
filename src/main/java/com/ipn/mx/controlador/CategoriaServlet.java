@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package com.ipn.mx.controlador;
 
 import com.ipn.mx.modelo.dao.CategoriaDAO;
@@ -221,7 +218,8 @@ public class CategoriaServlet extends HttpServlet {
     }
 
     private void mostrarReporte(HttpServletRequest request, HttpServletResponse response) {
-       CategoriaDAO dao = new CategoriaDAO();
+       /*
+        CategoriaDAO dao = new CategoriaDAO();
        ServletOutputStream sos = null;
        try{
             sos = response.getOutputStream(); 
@@ -241,7 +239,7 @@ public class CategoriaServlet extends HttpServlet {
            }catch(IOException ex){
                 System.out.println("Error al cerrar sos");
            }
-       }
+       }*/
        
 
     }

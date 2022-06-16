@@ -8,13 +8,10 @@ import com.ipn.mx.modelo.entidades.Categoria;
 import java.io.Serializable;
 import lombok.Data;
 
-/**
- *
- * @author darkdestiny
- */
+
 @Data
 public class CategoriaDTO implements Serializable{
-    private Categoria entidad;
+   private Categoria entidad;
 
     public CategoriaDTO() {
         entidad = new Categoria();

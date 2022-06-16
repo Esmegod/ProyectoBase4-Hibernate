@@ -8,10 +8,10 @@
             com.mysql.cj.jdbc.Driver
         </property>
         <property name="connection.url">
-            jdbc:mysql://localhost:3306/ProyectoBaseV5
+            jdbc:mysql://localhost:3306/ProyectoBase4
         </property>
-        <property name="connection.username">usuario</property>
-        <property name="connection.password">clave</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">SMCSDM:1</property>
         
         <property name="connection.pool_size">1</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
@@ -23,7 +23,7 @@
         <property name="hibernate.dbcp.maxIdle">10</property>
         <property name="hibernate.dbcp.minIdle">5</property>
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
-        <mapping classs="modelo.entidades.Alumno"/>
+        <mapping class="com.ipn.mx.modelo.entidades.Categoria"/>
         
         
         
