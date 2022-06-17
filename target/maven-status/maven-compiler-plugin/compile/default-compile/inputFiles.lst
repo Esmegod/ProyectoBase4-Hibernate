@@ -1,7 +1,7 @@
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\controlador\CategoriaServlet.java
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\dto\CategoriaDTO.java
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\Utilerias\HibernateUtil.java
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\entidades\Articulo.java
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\entidades\Categoria.java
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\dao\CategoriaDAO.java
-C:\Users\52552\Desktop\ProyectoBase_4.1\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\utilerias\Utileria.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\dto\CategoriaDTO.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\entidades\Categoria.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\controlador\CategoriaServlet.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\Utilerias\HibernateUtil.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\utilerias\Utileria.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\entidades\Articulo.java
+D:\Fer_Mtz\Desktop\3CM2\WAD\Deploys-Heroku\ProyectoBase4-Hibernate\src\main\java\com\ipn\mx\modelo\dao\CategoriaDAO.java
