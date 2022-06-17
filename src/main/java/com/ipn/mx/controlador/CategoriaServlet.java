@@ -4,17 +4,15 @@ package com.ipn.mx.controlador;
 import com.ipn.mx.modelo.dao.CategoriaDAO;
 import com.ipn.mx.modelo.dto.CategoriaDTO;
 import com.ipn.mx.modelo.entidades.Categoria;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletOutputStream;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -215,13 +213,13 @@ public class CategoriaServlet extends HttpServlet {
         }
     }
 
-    private void mostrarReporte(HttpServletRequest request, HttpServletResponse response) {
-       /*
+    private void mostrarReporte(HttpServletRequest request, HttpServletResponse response){
+       
         CategoriaDAO dao = new CategoriaDAO();
        ServletOutputStream sos = null;
        try{
             sos = response.getOutputStream(); 
-            File reporte = new File(getServletConfig().getServletContext().getRealPath("/reportes/Reportes.jasper"));   
+            File reporte = new File(getServletConfig().getServletContext().getRealPath("/reportes/ProyectoBase4.jasper"));   
             byte[] b = JasperRunManager.runReportToPdf(reporte.getPath(), null, dao.obtenerConexion()); 
             response.setContentType("application/pdf");
             response.setContentLength(b.length);
@@ -231,13 +229,15 @@ public class CategoriaServlet extends HttpServlet {
         }catch(IOException e){
             System.out.println("Error al mostrar reporte");
             e.getStackTrace();
-       }finally{
+       } catch (JRException ex) {
+            Logger.getLogger(CategoriaServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
            try{
                sos.close();
            }catch(IOException ex){
                 System.out.println("Error al cerrar sos");
            }
-       }*/
+       }
        
 
     }

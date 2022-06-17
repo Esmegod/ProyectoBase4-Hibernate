@@ -35,5 +35,9 @@
                 </div>
             </nav>
         </div>
+        <div class="container text-center mt-5">
+            <h3>Práctica para realizar altas, bajas, cambios y consultas utilizando hibernate, además de visualizar reportes.</h3>
+             <a href="CategoriaServlet?accion=listaDeCategorias" class="btn btn-outline-success">Mostrar categorias</a>
+        </div>
     </body>
 </html>

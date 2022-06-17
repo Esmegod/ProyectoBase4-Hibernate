@@ -27,7 +27,25 @@ import org.hibernate.query.Query;
  */
 
 public class CategoriaDAO {
+    private Connection conexion;
+    public Connection obtenerConexion() {
+        //obtener conexion
+        String usuario = "nqbwexzkhkyokp";
+        String clave = "44e6c9fed0157519e329b0f2449647e087be9004d2fdcdc99a185d390cebe97a";
+        String url = "jdbc:postgresql://ec2-34-225-159-178.compute-1.amazonaws.com:5432/dcllhv8me3p40t";
+        
 
+        String driverBD = "org.postgresql.Driver";
+
+        try {
+            Class.forName(driverBD);
+            conexion = DriverManager.getConnection(url, usuario, clave);
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(CategoriaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return conexion;
+    }
+    
    public void create(CategoriaDTO dto){
        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
        Transaction t = s.getTransaction();
