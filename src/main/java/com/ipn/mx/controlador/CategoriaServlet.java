@@ -3,6 +3,7 @@ package com.ipn.mx.controlador;
 
 import com.ipn.mx.modelo.dao.CategoriaDAO;
 import com.ipn.mx.modelo.dto.CategoriaDTO;
+import com.ipn.mx.modelo.entidades.Categoria;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
@@ -137,7 +138,7 @@ public class CategoriaServlet extends HttpServlet {
     private void listadoCategorias(HttpServletRequest request, HttpServletResponse response) {
         CategoriaDAO dao = new CategoriaDAO();
         try {
-            List lista = dao.readAll();
+            List lista = (List<Categoria>)dao.readAll();
             request.setAttribute("listado", lista);
             RequestDispatcher rd = request.getRequestDispatcher("/categoria/listaDeCategorias.jsp");
             rd.forward(request, response);

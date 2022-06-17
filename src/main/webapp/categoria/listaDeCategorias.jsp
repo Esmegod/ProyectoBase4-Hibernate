@@ -30,7 +30,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="CategoriaServlet?accion=listaDeCategorias">Listado de Categorías</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
@@ -55,26 +54,27 @@
                             <th>Eliminar</th>
                             <th>Actualizar</th>
                         </tr>
-                        <c:forEach items="${listado}" var="dto">
+                       
+                        <c:forEach items="${listado}" var="categoria">
                             <tr>
                                 <td>
-                                    <a href="CategoriaServlet?accion=ver&id=${dto.entidad.idCategoria}" class="btn btn-outline-success">
-                                        <c:out value="${dto.entidad.idCategoria}"/>
+                                    <a href="CategoriaServlet?accion=ver&id=${categoria.idCategoria}" class="btn btn-outline-success">
+                                        <c:out value="${categoria.idCategoria}"/>
                                     </a>
                                 </td>
                                 <td>
-                                    <c:out value="${dto.entidad.nombreCategoria}"/>
+                                    <c:out value="${categoria.nombreCategoria}"/>
                                 </td>
                                 <td>
-                                    <c:out value="${dto.entidad.descripcionCategoria}"/>
+                                    <c:out value="${categoria.descripcionCategoria}"/>
                                 </td>
                                 <td>
-                                    <a href="CategoriaServlet?accion=eliminar&id=${dto.entidad.idCategoria}" class="btn btn-outline-danger">
+                                    <a href="CategoriaServlet?accion=eliminar&id=${categoria.idCategoria}" class="btn btn-outline-danger">
                                         Eliminar
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="CategoriaServlet?accion=actualizar&id=${dto.entidad.idCategoria}" class="btn btn-outline-info">
+                                    <a href="CategoriaServlet?accion=actualizar&id=${categoria.idCategoria}" class="btn btn-outline-info">
                                         Actualizar
                                     </a>
                                 </td>

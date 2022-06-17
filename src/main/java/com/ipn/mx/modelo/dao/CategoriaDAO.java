@@ -59,18 +59,50 @@ public class CategoriaDAO {
         return resultados;
     }
    
-
-   public void update(CategoriaDTO dto){
+   public void update(int idCategoria, Categoria c){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.getTransaction();
+        try {
+            transaction.begin();
+            c.setIdCategoria(idCategoria);
+            session.merge(c);
+            transaction.commit();
+        } catch (HibernateException he) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            he.printStackTrace();
+            System.out.println("Error: " + he.getMessage());
+        }
+    }
+   /*public void update(CategoriaDTO dto){
+        Session session  = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.getTransaction();
+        try{
+            transaction.begin();
+            String update = "update Categoria set nombreCategoria =:nombre, descripcionCategoria=:descrpcion where idCategoria=id ";
+            int updatedEntities = .createQuery(update).setString("nombre", dto.getEntidad().getNombreCategoria()).setString("descripcion", dto.getEntidad().getDescripcionCategoria()).executeUpdate();
+            session.create
+            transaction.commit();
+            session.close();
+        }catch(HibernateException he){
+             if(transaction != null && transaction.isActive()){
+                transaction.rollback();
+            }
+        }
+        
+   }*/
    
-   }
    public void delete(CategoriaDTO dto){
    
    }
+   
    private List obtenerResultados(ResultSet rs){
     
        return null;
     
     }
+   
     public CategoriaDTO read(CategoriaDTO dto){
         
        return null;
