@@ -160,11 +160,11 @@ public class CategoriaServlet extends HttpServlet {
 
     private void actualizarCategoria(HttpServletRequest request, HttpServletResponse response) {
         CategoriaDAO dao = new CategoriaDAO();
-        CategoriaDTO dto = new CategoriaDTO();
-        dto.getEntidad().setIdCategoria(Integer.parseInt(request.getParameter("id")));
+        Categoria categoria = new Categoria();
+        int idCategoria = Integer.parseInt(request.getParameter("id"));
         try {
-            dto = dao.read(dto);
-            request.setAttribute("dto", dto);
+            categoria = dao.read(idCategoria);
+            request.setAttribute("categoria", categoria);
             RequestDispatcher rd = request.getRequestDispatcher("/categoria/categoriaForm.jsp");
             rd.forward(request, response);
         } catch (ServletException | IOException ex) {
@@ -174,10 +174,7 @@ public class CategoriaServlet extends HttpServlet {
 
     private void eliminarCategoria(HttpServletRequest request, HttpServletResponse response) {
         CategoriaDAO dao = new CategoriaDAO();
-        CategoriaDTO dto = new CategoriaDTO();
-        dto.getEntidad().setIdCategoria(Integer.parseInt(request.getParameter("id")));
-        dto = dao.read(dto);
-        dao.delete(dto);
+        dao.delete(Integer.parseInt(request.getParameter("id")));
         listadoCategorias(request, response);
     }
 
@@ -197,7 +194,7 @@ public class CategoriaServlet extends HttpServlet {
             dto.getEntidad().setDescripcionCategoria(request.getParameter("txtDescripcion"));
             dto.getEntidad().setIdCategoria(Integer.parseInt(request.getParameter("txtId")));
 
-            dao.update(dto);
+            dao.update(dto.getEntidad().getIdCategoria(), dto.getEntidad());
             request.removeAttribute("dto");
             listadoCategorias(request, response);
         }
@@ -206,11 +203,11 @@ public class CategoriaServlet extends HttpServlet {
 
     private void mostrarCategoria(HttpServletRequest request, HttpServletResponse response) {
         CategoriaDAO dao = new CategoriaDAO();
-        CategoriaDTO dto = new CategoriaDTO();
-        dto.getEntidad().setIdCategoria(Integer.parseInt(request.getParameter("id")));
+        Categoria categoria = new Categoria();
+        int idCategoria = Integer.parseInt(request.getParameter("id"));
         try {
-            dto = dao.read(dto);
-            request.setAttribute("categoria", dto);
+            categoria = dao.read(idCategoria);
+            request.setAttribute("categoria", categoria);
             RequestDispatcher rd = request.getRequestDispatcher("/categoria/verCategorias.jsp");
             rd.forward(request, response);
         } catch (ServletException | IOException ex) {

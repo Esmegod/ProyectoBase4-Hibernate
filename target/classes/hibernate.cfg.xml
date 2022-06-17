@@ -11,7 +11,7 @@
             jdbc:mysql://localhost:3306/ProyectoBase4
         </property>
         <property name="connection.username">root</property>
-        <property name="connection.password">SMCSDM:1</property>
+        <property name="connection.password">n0m3l0</property>
         
         <property name="connection.pool_size">1</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>

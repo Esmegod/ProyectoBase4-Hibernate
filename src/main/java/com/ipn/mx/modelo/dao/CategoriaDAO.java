@@ -75,6 +75,43 @@ public class CategoriaDAO {
             System.out.println("Error: " + he.getMessage());
         }
     }
+   
+    public Categoria read(int idCategoria){
+        String query = "From Categoria c Where c.idCategoria= :idCategoria";
+        Categoria categoria = null;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.getTransaction();
+        try {
+            transaction.begin();
+            Query q = session.createQuery(query, Categoria.class);
+            q.setParameter("idCategoria", idCategoria);
+            categoria = (Categoria) q.uniqueResult();
+            transaction.commit();
+        } catch (HibernateException he) {
+            if (transaction != null && transaction.isActive()) {
+                transaction.rollback();
+            }
+        }
+        return categoria;
+    }
+    
+    public void delete(int idCategoria){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.getTransaction();
+        try {
+            transaction.begin();
+            Categoria c = (Categoria) session.find(Categoria.class, idCategoria);
+            session.remove(c);
+            transaction.commit();
+        } catch (HibernateException he) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            he.printStackTrace();
+            System.out.println("Error: " + he.getMessage());
+        }
+    }
+   
    /*public void update(CategoriaDTO dto){
         Session session  = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction transaction = session.getTransaction();
@@ -109,11 +146,11 @@ public class CategoriaDAO {
         
     }
   
-    /*
+    
     public static void main(String[] args) {
         CategoriaDAO dao = new CategoriaDAO();
-        System.out.println(dao.readAll());
-        
+        dao.delete(12);
+       
     }
-       */
+       
 }

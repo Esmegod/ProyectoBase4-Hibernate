@@ -53,7 +53,7 @@
                             <div class="mb-3" hidden="true">
                                 <label for="txtId" class="form-label">Clave Categor&iacute;a</label>
                                 <input type="text" class="form-control" id="txtId" name="txtId" 
-                                       value="${dto.entidad.idCategoria}"
+                                       value="${categoria.idCategoria}"
                                        placeholder="Nombre de la Categoría"
 
                                        />
@@ -62,7 +62,7 @@
                         <div class="mb-3" >
                             <label for="txtId" class="form-label">Clave Categor&iacute;a</label>
                             <input type="text" class="form-control" id="txtId" name="txtId" 
-                                   value="${dto.entidad.idCategoria}"
+                                   value="${categoria.idCategoria}"
                                    placeholder="Nombre de la Categoría"
                                    readonly
                                    />
@@ -72,7 +72,7 @@
                         <div class="mb-3">
                             <label for="txtNombre" class="form-label">Nombre Categor&iacute;a</label>
                             <input type="text" class="form-control" id="txtNombre" name="txtNombre" 
-                                   value="${dto.entidad.nombreCategoria}"
+                                   value="${categoria.nombreCategoria}"
                                    placeholder="Nombre de la Categoría"
                                    required
                                    />
@@ -82,7 +82,7 @@
                             <label for="txtDescripcion" class="form-label"> Descripción de la Categoría</label>
                             <input type="text" name="txtDescripcion" id="txtDescripcion" 
                                    class="form-control"
-                                   value="${dto.entidad.descripcionCategoria}"
+                                   value="${categoria.descripcionCategoria}"
                                    placeholder="Descripción de la Categoría"
                                    required/>
                         </div>

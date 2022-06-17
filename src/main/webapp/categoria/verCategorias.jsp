@@ -45,13 +45,13 @@
                 <div class="card-body">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <c:out value="${categoria.entidad.idCategoria}"/>
+                            <c:out value="${categoria.idCategoria}"/>
                         </li>
                         <li class="list-group-item">
-                            <c:out value="${categoria.entidad.nombreCategoria}"/>
+                            <c:out value="${categoria.nombreCategoria}"/>
                         </li>
                         <li class="list-group-item">
-                            <c:out value="${categoria.entidad.descripcionCategoria}"/>
+                            <c:out value="${categoria.descripcionCategoria}"/>
                         </li>
                         
                     </ul>
