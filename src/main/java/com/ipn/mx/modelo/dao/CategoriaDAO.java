@@ -21,13 +21,11 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-
-
-
 /**
  *
  * @author darkdestiny
  */
+
 public class CategoriaDAO {
 
    public void create(CategoriaDTO dto){
@@ -78,17 +76,12 @@ public class CategoriaDAO {
        return null;
         
     }
+  
+    /*
     public static void main(String[] args) {
         CategoriaDAO dao = new CategoriaDAO();
-        CategoriaDTO dto = new CategoriaDTO();
-        dto.getEntidad().setIdCategoria(1234);
-        dto.getEntidad().setNombreCategoria("Perfumería");
-        dto.getEntidad().setDescripcionCategoria("En esta seccion hay perfumes");
-        System.out.println("Se esta creando una categoria");
-        dao.create(dto);
-       
-        System.out.println("Se creo una categoria");
+        System.out.println(dao.readAll());
+        
     }
-       
-       
+       */
 }
